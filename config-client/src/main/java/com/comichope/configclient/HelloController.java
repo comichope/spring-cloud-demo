@@ -6,11 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-    @Value("test")
+    @Value("${username}")
     String username;
 
     @RequestMapping("hi")
-    public String hi() {
+    public String hi(String name) {
         return username;
+//        return name;
     }
 }
